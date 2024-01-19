@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { MeineLiegenschaftComponent } from './pages/meine-liegenschaft/meine-liegenschaft.component';
+import { UeberUnsComponent } from './pages/ueber-uns/ueber-uns.component';
+import { KontaktComponent } from './pages/kontakt/kontakt.component';
 
 export const routes: Routes = [
-    {path: 'test', component: NavigationComponent}
+    {path: 'meine-liegenschaft', component: MeineLiegenschaftComponent},
+    {path: 'ueber-uns', component: UeberUnsComponent},
+    {path: 'kontakt', component: KontaktComponent}
 ];
-
-// @TODO
-// {path: 'crisis-list', component: CrisisListComponent},
-// {path: 'heroes-list', component: HeroesListComponent},
