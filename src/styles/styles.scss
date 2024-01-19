@@ -42,17 +42,7 @@ $custom-typography-level: mat.define-typography-level(
   $letter-spacing: normal,
 );
 
-/*
-  @TODO
-  wie zu laufen bringen?
-  typography: separates typography.scss oder styles.scss?
-  $lead: mat.define-typography-level(24px, 32px, 400),
-  $paragraph-1: mat.define-typography-level(24px, 32px, 400),
-  $paragraph-2: mat.define-typography-level(24px, 32px, 400),
-  $numbered-list: mat.define-typography-level(24px, 32px, 400),
-  $bullet-list: mat.define-typography-level(24px, 32px, 400),
-  $link-within-paragraph: mat.define-typography-level(24px, 32px, 400)
-*/
+
 $custom-typography-config: mat.define-typography-config(
   $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
   $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
