@@ -1,11 +1,16 @@
-<app-startseite></app-startseite>
+<!-- <app-startseite></app-startseite> -->
 
 <!-- Content -->
-<!-- <div class="container"> -->
-  <!-- <div class="navigation"> -->
-    <!-- <app-navigation></app-navigation> -->
-    <!-- <app-intro></app-intro> -->
-  <!-- </div> -->
-<!-- </div> -->
+<div class="app">
+  <div class="navigation">
+    <app-navigation></app-navigation>
+    <div class="container container--has-background">
+      <app-intro></app-intro>
+    </div>
+    <div class="container">
+      <!-- further components -->
+    </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>

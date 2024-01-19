@@ -1,53 +1,17 @@
 @import '../styles/styles.scss';
 @import '../styles/breakpoints.scss';
+@import '../styles/spacings.scss';
 
 
-@include respond-to(small-screen) {
-  .container  {
-    height: 100%;
-    font-size: 100%;
-    display: grid;
-    margin-left: 80px;
-    margin-right: 80px;
-    grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: 80px auto 80px;
-    column-gap: 32.36px;
-    row-gap: 32.36px; 
+
+.container {
+  padding: var(--spacing-10) var(--spacing-5) var(--spacing-24);
+
+  @include respond-to(large-screen) {
+    padding: 100px 189px 100px;
   }
 
-  .navigation {
-    @include respond-to(small-screen) {
-    }
-    @include respond-to(large-screen) {
-    }
-    grid-row: 1;
-    // grid-column: 1/12;
-    grid-column-start: 1;
-    grid-column-end: 13;
-    margin-left: -80px;
-    margin-right: -80px;
-  }
-}
-
-@include respond-to(large-screen) {
-  .container  {
-    height: 100%;
-    font-size: 100%;
-    display: grid;
-    margin-left: 80px;
-    margin-right: 80px;
-    grid-template-columns: repeat(12, 1fr);
-    // grid-template-rows: 80px auto 80px;
-    column-gap: 32.36px;
-    row-gap: 32.36px; 
-  }
-
-  .navigation {
-    grid-row: 1;
-    // grid-column: 1/12;
-    grid-column-start: 1;
-    grid-column-end: 13;
-    margin-left: -80px;
-    margin-right: -80px;
+  &.container--has-background {
+    background: map-get($energieportal-client-grundfarben, 'winergie-gruen-light');
   }
 }

@@ -1,76 +1,24 @@
 @import '../../../styles/styles.scss';
 @import '../../../styles/typography.scss';
+@import '../../../styles/spacings.scss';
 
-@include respond-to(small-screen) {
-  .intro-container {
-    min-width: 375px; //@TODO
-    padding: 40px 20px 40px 20px;
-    gap: 12px;
-  }
-
-  .intro-content {
-    max-width: 52.6875rem;
-    /* 843px */
-    //@TODO
-  }
-
-  .intro-titel {
-    font-size: 48px;
-    letter-spacing: 0.24px;
-  }
-
-  .intro-lead {
-    font-size: 20px;
-    letter-spacing: 0.1px;
-  }
-}
-
-@include respond-to(large-screen) {
-  .intro-container {
-    width: 1440px;
-    padding: 100px 189px 150px 189px;
-    gap: 16px;
-  }
-
-  .intro-content {
-    max-width: 52.6875rem;
-    /* 843px */
-  }
-
-  // .intro-titel h1 {
-  //   @include typo--h1();
-  // }
-
-  .intro-lead {
-    font-size: 24px;
-    letter-spacing: 0.12px;
-  }
-}
-
-.intro-container {
-  background: map-get($energieportal-client-grundfarben, 'winergie-gruen-light');
+.intro {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-}
+  gap: var(--spacing-4);
 
-.intro-content {
-  font-family: 'News Gothic 01';
-  font-style: normal;
-}
+  @include respond-to(large-screen) {
+    width: 80%;
+  }
 
-.intro-titel {
-  // padding-bottom: 1rem;
-  color: map-get($energieportal-client-grundfarben, 'headline-black');
-  line-height: 110%;
-  /* 70.4px */
-  font-weight: 600;
-  padding: 0 0 16px;
-}
+  h1 {
+    color: map-get($energieportal-client-grundfarben, 'headline-black');
+  }
 
-.intro-lead {
-  color: map-get($energieportal-client-grundfarben, 'copy-black');
-  line-height: 130%;
-  /* 31.2px */
-  font-weight: 400;
+  .intro__lead {
+    @include typo--lead();
+    color: map-get($energieportal-client-grundfarben, 'copy-black');
+  }
 }

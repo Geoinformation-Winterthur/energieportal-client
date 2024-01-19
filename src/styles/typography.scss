@@ -107,3 +107,11 @@ p,
   letter-spacing: clamp(0.005rem, 0.0048rem + 0.0009vw, 0.005625rem);
   font-family: "News Gothic";
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
