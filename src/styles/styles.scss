@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @import '../styles/breakpoints.scss';
+@import '../styles/typography.scss';
 @include mat.core();
 
 $energieportal-client-primary: mat.define-palette(mat.$indigo-palette, 500);
@@ -33,31 +34,6 @@ $energieportal-client-skala: (
   'scale-dark-red': #9B1200
 );
 
-/* Typography */
-$custom-typography-level: mat.define-typography-level(
-  $font-family: 'News Gothic 01',
-  $font-weight: 400,
-  $font-size: 1rem,
-  $line-height: 1,
-  $letter-spacing: normal,
-);
-
-
-$custom-typography-config: mat.define-typography-config(
-  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
-  $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $headline-3: mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
-  $headline-4: mat.define-typography-level(34px, 40px, 400),
-  $headline-5: mat.define-typography-level(24px, 32px, 400),
-);
-
-@font-face {
-  font-family: 'News Gothic 01';
-  src: url(../assets/fonts/313EB5_0_0.ttf) format('truetype');
-  font-family: 'News Gothic 02';
-  src: url(../assets/fonts/313EB5_1_0.ttf) format('truetype');
-}
-
 /* Custom theme object */
 $energieportal-client-theme: mat.define-light-theme((
   color: (
@@ -66,8 +42,9 @@ $energieportal-client-theme: mat.define-light-theme((
     warn: $energieportal-client-warn,
     grundfarben: $energieportal-client-grundfarben,
     signal: $energieportal-client-signal,
-    skala: $energieportal-client-skala
-  )
+    skala: $energieportal-client-skala,
+  ),
+  typography: $custom-typography-config,
 ));
 
 @include mat.all-component-themes($energieportal-client-theme);

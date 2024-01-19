@@ -30,8 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss",
-              "src/styles/breakpoints.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },

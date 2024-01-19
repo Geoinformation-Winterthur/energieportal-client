@@ -1,4 +1,11 @@
+@use '@angular/material' as mat;
 @import '../../../styles/styles.scss';
+@import '../../../styles/typography.scss';
+
+
+// Use the default configuration.
+// @include mat.typography-hierarchy($my-typography);
+@include mat.typography-hierarchy($custom-typography-config);
 
 @include respond-to(small-screen) {
     .intro-container {
