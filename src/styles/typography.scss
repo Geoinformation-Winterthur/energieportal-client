@@ -1,26 +1,109 @@
-/* Typography */
-$custom-typography-level: mat.define-typography-level(
-  $font-family: 'News Gothic 01',
-  $font-weight: 400,
-  $font-size: 1rem,
-  $line-height: 1,
-  $letter-spacing: normal,
-);
+// Typography
 
-$custom-typography-config: mat.define-typography-config(
-  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
-  $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $headline-3: mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
-  $headline-4: mat.define-typography-level(34px, 40px, 400),
-  $headline-5: mat.define-typography-level(24px, 32px, 400),
-);
-
-// $my-typography: mat.define-typography-config();
-// @include mat.typography-hierarchy($custom-typography-config);
+// min screen 375px, max screen 1440px
 
 @font-face {
-  font-family: "News Gothic 01";
-  src: url("../assets/fonts/313EB5_0_0.ttf") format('truetype');
-  font-family: 'News Gothic 02';
-  src: url("../assets/fonts/313EB5_1_0.ttf") format('truetype');
+  font-family: 'News Gothic';
+  src: url('../assets/fonts/313EB5_0_0.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'News Gothic';
+  src: url('../assets/fonts/313EB5_1_0.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@mixin typo--h1 {
+  font-family: "News Gothic";
+  font-size: clamp(3rem, 2.6479rem + 1.5023vw, 4rem);
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: 0.24px;
+}
+
+h1,
+.headline-1 {
+  @include typo--h1();
+}
+
+@mixin typo--h2 {
+  font-family: "News Gothic";
+  font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: clamp(0.01rem, 0.0082rem + 0.0075vw, 0.015rem);
+}
+
+h2,
+.headline-2 {
+  @include typo--h2();
+}
+
+@mixin typo--h3 {
+  font-family: "News Gothic";
+  font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: clamp(0.0075rem, 0.0066rem + 0.0038vw, 0.01rem);
+}
+
+h3,
+.headline-3 {
+  @include typo--h3();
+}
+
+@mixin typo--h4 {
+  font-family: "News Gothic";
+  font-size: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: clamp(0.00625rem, 0.0058rem + 0.0019vw, 0.0075rem);
+}
+
+h4,
+.headline-4 {
+  @include typo--h4();
+}
+
+@mixin typo--h5 {
+  font-family: "News Gothic";
+  font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: clamp(0.005625rem, 0.0054rem + 0.0009vw, 0.00625rem);
+}
+
+h5,
+.headline-5 {
+  @include typo--h5();
+}
+
+@mixin typo--lead {
+  font-size: clamp(1.25rem, 1.162rem + 0.3756vw, 1.5rem);
+  line-height: 130%;
+  font-weight: 400;
+  letter-spacing: clamp(0.00625rem, 0.0058rem + 0.0019vw, 0.0075rem);
+  font-family: "News Gothic";
+}
+
+@mixin typo--p1 {
+  font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+  line-height: 130%;
+  font-weight: 400;
+  letter-spacing: clamp(0.005625rem, 0.0054rem + 0.0009vw, 0.00625rem);
+  font-family: "News Gothic";
+}
+
+p,
+.body-1 {
+  @include typo--p1();
+}
+
+@mixin typo--p2 {
+  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  line-height: 130%;
+  font-weight: 400;
+  letter-spacing: clamp(0.005rem, 0.0048rem + 0.0009vw, 0.005625rem);
+  font-family: "News Gothic";
 }
