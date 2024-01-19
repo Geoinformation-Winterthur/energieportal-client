@@ -1,0 +1,108 @@
+@import '../../../styles/styles.scss';
+@import '../../../styles/breakpoints.scss';
+
+
+@include respond-to(small-screen) {
+
+}
+
+@include respond-to(large-screen) {
+}
+
+.header-container {
+  background: map-get($energieportal-client-grundfarben, 'white');
+}
+
+.header-content {
+  padding-top: 3.125rem;
+  padding-left: 2.125rem;
+  color: map-get($energieportal-client-grundfarben, 'headline-black');
+  font-family: 'News Gothic 01';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 130%; /* 22.1px */
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title, .nav, .nav-divider {
+  padding-top: 1.25rem;
+  font-style: normal;
+}
+
+.header-title {
+  color: map-get($energieportal-client-grundfarben, 'headline-black');
+  font-family: 'News Gothic 01';
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 100%; /* 40px */
+  padding-left: 1.875rem;
+}
+
+.header-content-logo {
+  padding-left: 1.875rem;
+}
+
+.header-content-spacer {
+  flex: 1 1 auto;
+}
+
+.red-line {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 0.25rem;
+  height: 2.625rem;
+  flex-shrink: 0;
+  background-color: map-get($energieportal-client-grundfarben, 'brand-rot-500');
+}
+
+.nav, .nav-divider {
+  color: map-get($energieportal-client-grundfarben, 'copy-black');
+  font-family: 'News Gothic 01';
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  line-height: 130%; /* 22.1px */
+  padding-left: 1.875rem;
+}
+
+.nav-divider {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  letter-spacing: 0.3px;
+}
+
+
+// .logo {
+//   display: flex;
+//   width: 260px;
+//   height: 2.625rem;
+//   // padding: 400px 400px 400px 400.012px;
+//   margin-right: 2rem;
+//   justify-content: end;
+//   align-items: flex-end;
+//   // gap: -0.489px;
+//   flex-shrink: 0;
+// }
+
+// .logo {
+//   position: absoulte;
+//     top: 1rem;
+//     right: 1rem;
+//     width: 16.25rem;
+//     height: 2.625rem;
+// }
+
+// .header-content-right {
+//   display: inline-flex;
+//   align-items: end;
+//   padding: 0rem 0rem 0rem 2rem;
+// }
+
+
+// .header-content-left {
+//   display: inline-flex;
+//   align-items: center;
+//   padding: 0rem 1.5rem 0rem 0rem;
+// }

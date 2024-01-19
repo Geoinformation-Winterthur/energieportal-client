@@ -1,0 +1,53 @@
+@import '../styles/styles.scss';
+@import '../styles/breakpoints.scss';
+
+
+@include respond-to(small-screen) {
+  .container  {
+    height: 100%;
+    font-size: 100%;
+    display: grid;
+    margin-left: 80px;
+    margin-right: 80px;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: 80px auto 80px;
+    column-gap: 32.36px;
+    row-gap: 32.36px; 
+  }
+
+  .navigation {
+    @include respond-to(small-screen) {
+    }
+    @include respond-to(large-screen) {
+    }
+    grid-row: 1;
+    // grid-column: 1/12;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    margin-left: -80px;
+    margin-right: -80px;
+  }
+}
+
+@include respond-to(large-screen) {
+  .container  {
+    height: 100%;
+    font-size: 100%;
+    display: grid;
+    margin-left: 80px;
+    margin-right: 80px;
+    grid-template-columns: repeat(12, 1fr);
+    // grid-template-rows: 80px auto 80px;
+    column-gap: 32.36px;
+    row-gap: 32.36px; 
+  }
+
+  .navigation {
+    grid-row: 1;
+    // grid-column: 1/12;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    margin-left: -80px;
+    margin-right: -80px;
+  }
+}

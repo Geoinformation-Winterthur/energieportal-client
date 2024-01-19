@@ -1,0 +1,98 @@
+
+// $small-screen: 576px;
+// $medium-screen: 768px;
+// $large-screen: 992px;
+// $extra-large-screen: 1200px;
+
+// @media (min-width: $small-screen) {
+//   // Styles for small screens and above
+// }
+
+// @media (min-width: $medium-screen) {
+//   // Styles for medium screens and above
+// }
+
+// @media (min-width: $large-screen) {
+//   // Styles for large screens and above
+// }
+
+// @media (min-width: $extra-large-screen) {
+//   // Styles for extra large screens and above
+// }
+
+
+
+
+// $breakpoint-small: 375px;
+
+// // Define the second breakpoint for a minimum width of 1440px
+// $breakpoint-large: 1440px;
+
+// @mixin small-screen {
+//   @media (min-width: $breakpoint-small) {
+//     @content;
+//   }
+// }
+
+// @mixin large-screen {
+//   @media (min-width: $breakpoint-large) {
+//     @content;
+//   }
+// }
+
+// .selector {
+//     background-color: red;
+//     @include small-screen {
+//         background-color: green;
+//     }
+//     @include large-screen {
+//         background-color: blue;
+//     }
+// }
+
+// $breakpoints: (
+//     'small-screen': 375px,
+//     'large-screen': 1440px
+// ) !default;
+
+// @mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+//   // If $mq-breakpoint is a key that exists in $mq-breakpoints, get and use the value
+//   @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+//     $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+//   }
+  
+//   @media screen and (min-width: #{$mq-breakpoint}) {
+//     @content;
+//   }
+// }
+
+$breakpoints: (
+    'small-screen': (min-width: 375px),
+    'large-screen': (min-width: 1440px)
+) !default;
+
+@mixin respond-to($breakpoint) {
+    // @media(min-width: $breakpoint) {
+    //     @content;
+    // }
+
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "No value found for `#{$breakpoint}`. " + "Available breakpoints are: #{map-keys($breakpoints)}.";
+      }
+}
+
+// .selector {
+//     background-color: red;
+
+//     @include respond-to('small-screen') {
+//         background-color: green;
+//     }
+//     @include respond-to('large-screen') {
+//         background-color: blue;
+//     }
+// }
