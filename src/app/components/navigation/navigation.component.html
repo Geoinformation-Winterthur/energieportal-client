@@ -22,7 +22,9 @@
             <span class="nav-divider">|</span>
             <span>Unser Beratungsangebot</span>
             <span class="nav-divider">|</span>
-            <span>Kontakt</span>
+            <span routerLink="/kontakt" routerLinkActive="active" ariaCurrentWhenActive="page">Kontakt</span>
         </div>
     </mat-toolbar-row>
   </mat-toolbar>
+
+  <!-- Given a route configuration [{ path: 'user/:name', component: UserCmp }], the following creates a static link to the route: <a routerLink="/user/bob">link to user component</a> -->
