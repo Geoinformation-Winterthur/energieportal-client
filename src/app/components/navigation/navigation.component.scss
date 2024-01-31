@@ -1,12 +1,8 @@
 @import '../../../styles/styles.scss';
-@import '../../../styles/breakpoints.scss';
-@import '../../../styles/typography.scss';
 
-@include respond-to(small-screen) {
-}
+@include respond-to(small-screen) {}
 
-@include respond-to(large-screen) {
-}
+@include respond-to(large-screen) {}
 
 .header-container {
   background: map-get($energieportal-client-grundfarben, 'white');
@@ -21,7 +17,9 @@
   justify-content: space-between;
 }
 
-.header-title, .nav, .nav-divider {
+.header-title,
+.nav,
+.nav-divider {
   padding-top: 1.25rem;
   font-style: normal;
   display: none;
@@ -31,6 +29,7 @@
   @include typo--h2;
   color: map-get($energieportal-client-grundfarben, 'headline-black');
   padding-left: 1.875rem;
+
   @include respond-to(large-screen) {
     display: block;
   }
@@ -54,11 +53,13 @@
   background-color: map-get($energieportal-client-grundfarben, 'brand-rot-500');
 }
 
-.nav, .nav-divider {
+.nav,
+.nav-divider {
   color: map-get($energieportal-client-grundfarben, 'copy-black');
   @include typo--h5;
   text-align: center;
   padding-left: 1.875rem;
+
   @include respond-to(large-screen) {
     display: flex;
     align-items: end;
