@@ -6,6 +6,7 @@
 
 .header-container {
   background: map-get($energieportal-client-grundfarben, 'white');
+  padding: var(--spacing-9) var(--spacing-5) var(--spacing-5);
 }
 
 .header-content {
