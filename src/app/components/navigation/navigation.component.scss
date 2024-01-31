@@ -1,9 +1,8 @@
 @import '../../../styles/styles.scss';
 @import '../../../styles/breakpoints.scss';
-
+@import '../../../styles/typography.scss';
 
 @include respond-to(small-screen) {
-
 }
 
 @include respond-to(large-screen) {
@@ -17,10 +16,7 @@
   padding-top: 3.125rem;
   padding-left: 2.125rem;
   color: map-get($energieportal-client-grundfarben, 'headline-black');
-  font-family: 'News Gothic 01';
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 130%; /* 22.1px */
+  @include typo--p2;
   display: flex;
   justify-content: space-between;
 }
@@ -28,15 +24,16 @@
 .header-title, .nav, .nav-divider {
   padding-top: 1.25rem;
   font-style: normal;
+  display: none;
 }
 
 .header-title {
+  @include typo--h2;
   color: map-get($energieportal-client-grundfarben, 'headline-black');
-  font-family: 'News Gothic 01';
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 100%; /* 40px */
   padding-left: 1.875rem;
+  @include respond-to(large-screen) {
+    display: block;
+  }
 }
 
 .header-content-logo {
@@ -59,12 +56,13 @@
 
 .nav, .nav-divider {
   color: map-get($energieportal-client-grundfarben, 'copy-black');
-  font-family: 'News Gothic 01';
-  font-size: 1.25rem;
+  @include typo--h5;
   text-align: center;
-  font-weight: 600;
-  line-height: 130%; /* 22.1px */
   padding-left: 1.875rem;
+  @include respond-to(large-screen) {
+    display: flex;
+    align-items: end;
+  }
 }
 
 .nav-divider {
